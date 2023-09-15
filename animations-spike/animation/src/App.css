@@ -1,0 +1,215 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.moves-up {
+  background-color: red;
+  /* transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s; */
+
+  /* transition: transform 0.3s ease-in-out, background-color 0.3s, color 0.3s; */
+  transition: all 0.3s;
+}
+
+.moves-up:hover {
+  transform: translateY(-10px);
+  background-color: white;
+  color: blue;
+}
+
+.typewriter-container {
+  display: inline-block;
+  .typewriter-text {
+    font-family: monospace;
+    letter-spacing: 10px;
+    font-size: 2em;
+
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    animation: typing 2s steps(30), cursor 0.4s step-end infinite alternate;
+  }
+}
+
+/* cursor blinks */
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+/* typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+/* moving below */
+.solution {
+  display: flex;
+  flex-direction: row;
+  .solution-letter {
+    /* setting a block for each letter to go into */
+    width: 40px;
+    height: 40px;
+    border: solid 5px black;
+    margin: 5px;
+  }
+}
+.letter-options {
+  display: flex;
+  flex-direction: row;
+  .letter-option {
+    /* setting a block for each letter to go into */
+    width: 40px;
+    height: 40px;
+    border: solid 5px pink;
+    margin: 5px;
+  }
+}
+.oneToOne {
+  background-color: red;
+  animation-name: moveToOne;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+.twoToThree {
+  background-color: blue;
+}
+.threeToTwo {
+  background-color: yellow;
+}
+/* the keyframe below slides somethin into the first solution slot */
+@keyframes moveToOne {
+  from {
+    transform: translateX(0);
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+/* FOR MOVES 2 */
+/* The CSS you need for the animation: */
+
+.element,
+.target {
+  position: absolute;
+  transition: left 1s ease-out, top 1s ease-out;
+}
+
+/* And the rest... */
+
+/*
+ * Style everything to be visible
+ */
+
+.element,
+.target {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+}
+.target {
+  background-color: red;
+}
+
+/*
+ * Randomize the elements position
+ */
+
+.element:nth-child(1) {
+  left: 43px;
+  top: 10px;
+}
+.element:nth-child(2) {
+  left: 46px;
+  top: 22px;
+}
+.element:nth-child(3) {
+  left: 99px;
+  top: 26px;
+}
+.element:nth-child(4) {
+  left: 180px;
+  top: 174px;
+}
+.element:nth-child(5) {
+  left: 121px;
+  top: 90px;
+}
+.target {
+  top: 25px;
+  left: 147px;
+}
+
+.solution-container {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 10px;
+  border: 5px solid blue;
+  padding: 0;
+}
+.letter-container {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 10px;
+  border: 5px pink solid;
+}
+.solutions,
+.letter-button {
+  display: block;
+  position: absolute;
+  margin: 0;
+  transition: left 0.5s ease-out, top 0.5s ease-out;
+}
