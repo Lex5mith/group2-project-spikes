@@ -8,7 +8,7 @@ const Typewriter = () => {
   return (
     <>
       <div className="typewriter-container">
-        <p className="typewriter-text">{myText}</p>
+        <p className="typewriter-text">{myText}...</p>
       </div>
     </>
   );

@@ -8,6 +8,7 @@ import Moves2 from "./components/pages/Moves2";
 import Typewriter from "./components/pages/Typerwriter";
 import { Routes, Route } from "react-router-dom";
 import Moves3 from "./components/pages/Moves3";
+import Moves4 from "./components/pages/Moves4";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,6 +31,7 @@ function App() {
         />
         <Route path="/2" element={<Moves2 />}></Route>
         <Route path="/3" element={<Moves3 />}></Route>
+        <Route path="/4" element={<Moves4 />}></Route>
       </Routes>
     </>
   );
